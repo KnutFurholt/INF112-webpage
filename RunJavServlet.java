@@ -11,7 +11,7 @@ public class RunJarServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            Process process = Runtime.getRuntime().exec("java -jar path/to/yourfile.jar");
+            Process process = Runtime.getRuntime().exec("java -jar xeno.jar");
             process.waitFor();
             response.getWriter().write("JAR file executed successfully.");
         } catch (Exception e) {
